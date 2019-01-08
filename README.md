@@ -8,7 +8,7 @@ sysfs interface (kobject creation and sysfs group creation ) is provided to user
 
   <pre>
 echo "pr-s1-eth1" >  /sys/kernel/update_stats/update_stats 
-<\pre>
+</pre>
 On sys file store function invocation (which will be called when the file is written in sysfs) , netstat group is added for the kernel object and corresponding store/ show functions are registered .
 
 <pre>
