@@ -10,6 +10,7 @@ sysfs interface (kobject creation and sysfs group creation ) is provided to user
 echo "pr-s1-eth1" >  /sys/kernel/update_stats/update_stats  
 On sys file store function invocation (which will be called when the file is written in sysfs) , netstat group is added for the kernel object and corresponding store/ show functions are registered .
 
+<pre>
 ls -lhrt /sys/kernel/pr-s1-eth1/statistics/
 total 0
 -rw-r--r-- 1 root root 4.0K 10 24 17:32 tx_window_errors
@@ -35,6 +36,8 @@ total 0
 -rw-r--r-- 1 root root 4.0K 10 24 17:32 rx_bytes
 -rw-r--r-- 1 root root 4.0K 10 24 17:32 multicast
 -rw-r--r-- 1 root root 4.0K 10 24 17:32 collisions
+</pre>
+
 To update stats on a particular netdev device ,respective kernel sys file in interface statistics directory should be written to. Updated stat value can be seen in ifconfig output.
 
 echo 12345 >  /sys/kernel/pr-s1-eth2/statistics/rx_bytes
