@@ -6,8 +6,9 @@ Packets statistics can be retrieved from opeflow aware switch using openflow mes
 
 sysfs interface (kobject creation and sysfs group creation ) is provided to userspace to enable netdev stats update on a give interface.
 
-  
-echo "pr-s1-eth1" >  /sys/kernel/update_stats/update_stats  
+  <pre>
+echo "pr-s1-eth1" >  /sys/kernel/update_stats/update_stats 
+<\pre>
 On sys file store function invocation (which will be called when the file is written in sysfs) , netstat group is added for the kernel object and corresponding store/ show functions are registered .
 
 <pre>
@@ -39,5 +40,6 @@ total 0
 </pre>
 
 To update stats on a particular netdev device ,respective kernel sys file in interface statistics directory should be written to. Updated stat value can be seen in ifconfig output.
-
+<pre>
 echo 12345 >  /sys/kernel/pr-s1-eth2/statistics/rx_bytes
+<\pre>
