@@ -42,4 +42,4 @@ total 0
 To update stats on a particular netdev device ,respective kernel sys file in interface statistics directory should be written to. Updated stat value can be seen in ifconfig output.
 <pre>
 echo 12345 >  /sys/kernel/pr-s1-eth2/statistics/rx_bytes
-<\pre>
+</pre>
